@@ -25,8 +25,7 @@ public class BallController : MonoBehaviour
             rb.position = new Vector2(paddle.GetPosition().x, paddle.GetStartY() + paddle.transform.position.y);
             if (Input.GetKeyUp(KeyCode.Mouse0))
             {
-                isGrounded = false;
-                rb.bodyType = RigidbodyType2D.Dynamic;
+                throwBall();
             }
         }
     }
@@ -43,4 +42,5 @@ public class BallController : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Dynamic;
         rb.velocity = new Vector2(0f, 15f);
     }
+    
 }
